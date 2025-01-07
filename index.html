@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <title>Polyrhythm</title>
+        <meta name="description" content="a calm and soothing polyrhythm" />
+        <link rel="icon" href="/nyan_cat.png"/>
+        <link rel="apple-touch-icon" href="/nyan_cat.png" />
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                font-family: Arial, sans-serif;
+            }
+            canvas {
+                display: block;
+                background-color: #000;
+            }
+            .controls {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 10;
+                background-color: #fff;
+            }
+            .controls label {
+                display: block;
+                margin: 10px 0;
+            }
+            .controls input {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="myCanvas"></canvas>
+        <div class="controls">
+            <label for="ballMinSpeedSlider">Ball Min Speed: <span id="ballMinSpeedValue">0.02</span></label>
+            <input type="range" id="ballMinSpeedSlider" min="0.01" max="0.1" step="0.01" value="0.02">
+            
+            <label for="ballSpeedStepSlider">Ball Speed Step: <span id="ballSpeedStepValue">0.01</span></label>
+            <input type="range" id="ballSpeedStepSlider" min="0.005" max="0.05" step="0.005" value="0.01">
+            <p>click the window to play sound</p>
+        </div>
+
+        <script src="slider.js"></script>
+        <script src="track.js"></script>
+        <script src="ball.js"></script>
+        <script src="main.js"></script>
+        <script src="sound.js"></script>
+    </body>
+</html>
